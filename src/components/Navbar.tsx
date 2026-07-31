@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Process", href: "#process" },
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Contact", href: "#cta" },
 ];
 
 export default function Navbar() {
@@ -17,55 +16,56 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-bg-primary/90 backdrop-blur-lg border-b border-heading/5"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-3 group">
+        <div className="relative flex items-center justify-between h-20">
+          <a href="#" className="flex items-center gap-3">
             <Image
               src="/cold-build-logo.jpg"
               alt="Cold Build"
               width={40}
               height={40}
-              className="rounded-lg group-hover:opacity-90 transition-opacity duration-200"
+              className="rounded-lg"
               priority
             />
             <span className="text-heading font-semibold text-xl tracking-tight hidden sm:inline">
-              Cold<span className="text-premium-gold">Build</span>
+              Cold<span className="text-accent-gold">Build</span>
             </span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-light-gray hover:text-premium-gold transition-colors duration-200 text-sm tracking-wide uppercase"
+          <AnimatePresence>
+            {scrolled && (
+              <motion.nav
+                initial={{ opacity: 0, y: -12, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -12, scale: 0.97 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-1 rounded-full border border-heading/10 bg-bg-primary/90 backdrop-blur-xl px-2 py-2 shadow-[0_8px_30px_rgba(31,31,31,0.08)]"
               >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#cta"
-              className="px-5 py-2.5 bg-premium-gold text-btn-text font-semibold text-sm rounded-lg hover:bg-btn-primary-hover transition-colors duration-200"
-            >
-              Start a Project
-            </a>
-          </div>
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-2 rounded-full text-sm text-light-gray hover:text-heading hover:bg-heading/5 transition-colors duration-200"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <a
+                  href="#cta"
+                  className="ml-1 px-4 py-2 rounded-full bg-premium-gold text-btn-text text-sm font-semibold hover:bg-btn-primary-hover transition-colors duration-200"
+                >
+                  Start a Project
+                </a>
+              </motion.nav>
+            )}
+          </AnimatePresence>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -94,15 +94,15 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-bg-secondary/95 backdrop-blur-lg border-t border-heading/5"
+            className="md:hidden border-t border-heading/5 bg-bg-primary/95 backdrop-blur-xl"
           >
-            <div className="px-6 py-6 space-y-4">
-              {navLinks.map((link) => (
+            <div className="px-6 py-6 space-y-1">
+              {[...navLinks, { label: "Contact", href: "#cta" }].map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-light-gray hover:text-premium-gold transition-colors py-2 text-sm tracking-wide uppercase"
+                  className="block px-4 py-2.5 rounded-lg text-light-gray hover:text-heading hover:bg-heading/5 transition-colors text-sm"
                 >
                   {link.label}
                 </a>
@@ -110,7 +110,7 @@ export default function Navbar() {
               <a
                 href="#cta"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full text-center px-5 py-3 bg-premium-gold text-btn-text font-semibold text-sm rounded-lg"
+                className="block w-full text-center px-5 py-3 bg-premium-gold text-btn-text font-semibold text-sm rounded-lg mt-3"
               >
                 Start a Project
               </a>
@@ -118,6 +118,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </header>
   );
 }

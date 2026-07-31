@@ -1,3 +1,8 @@
+/*
+ * Hallmark · macrostructure: Split Studio · theme: custom (forest · #1E3D32)
+ * genre: modern-minimal · pre-emit critique: P4 H4 E4 S5 R4 V4
+ * nav: N5 floating pill · footer: Ft5 statement
+ */
 @import "tailwindcss";
 
 @theme inline {
@@ -29,6 +34,7 @@
   --color-btn-secondary-hover: #245543;
 
   --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-display);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -54,11 +60,6 @@ html.lenis body {
   overflow: hidden;
 }
 
-.custom-cursor-active,
-.custom-cursor-active * {
-  cursor: none !important;
-}
-
 body {
   background: var(--color-bg-primary);
   color: var(--color-text-body);
@@ -68,6 +69,11 @@ body {
 ::selection {
   background: rgba(200, 164, 93, 0.35);
   color: #1F1F1F;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-style: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -81,19 +87,4 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
 }
