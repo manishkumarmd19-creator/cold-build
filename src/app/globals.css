@@ -1,32 +1,32 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg-primary: #F6F1E7;
-  --color-bg-secondary: #ECE5D8;
-  --color-primary: #274C3A;
-  --color-secondary: #4F6F52;
-  --color-accent-gold: #D4A017;
+  --color-bg-primary: #F8F6F1;
+  --color-bg-secondary: #DDD5C7;
+  --color-primary: #1E3D32;
+  --color-secondary: #2D6A4F;
+  --color-accent-gold: #C8A45D;
   --color-heading: #1F1F1F;
   --color-body: #5C5C5C;
   --color-btn-text: #FFFFFF;
 
-  --color-rich-charcoal: #F6F1E7;
-  --color-dark-slate: #ECE5D8;
-  --color-premium-gold: #274C3A;
-  --color-emerald: #4F6F52;
+  --color-rich-charcoal: #F8F6F1;
+  --color-dark-slate: #DDD5C7;
+  --color-premium-gold: #1E3D32;
+  --color-emerald: #2D6A4F;
   --color-off-white: #FFFFFF;
   --color-light-gray: #5C5C5C;
   --color-medium-gray: #9B9589;
 
   --color-text-heading: #1F1F1F;
   --color-text-body: #5C5C5C;
-  --color-accent: #274C3A;
-  --color-icon: #4F6F52;
+  --color-accent: #1E3D32;
+  --color-icon: #2D6A4F;
 
-  --color-btn-primary: #274C3A;
-  --color-btn-primary-hover: #1E3A2D;
-  --color-btn-secondary: #4F6F52;
-  --color-btn-secondary-hover: #3D5A40;
+  --color-btn-primary: #1E3D32;
+  --color-btn-primary-hover: #172E25;
+  --color-btn-secondary: #2D6A4F;
+  --color-btn-secondary-hover: #245543;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -66,7 +66,7 @@ body {
 }
 
 ::selection {
-  background: rgba(212, 160, 23, 0.35);
+  background: rgba(200, 164, 93, 0.35);
   color: #1F1F1F;
 }
 
