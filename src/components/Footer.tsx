@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const footerLinks = [
   { label: "Services", href: "#services" },
@@ -49,10 +50,14 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-premium-gold to-premium-gold/60 flex items-center justify-center">
-                <span className="text-rich-charcoal font-bold text-sm">C</span>
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/cold-build-logo.jpg"
+                alt="Cold Build"
+                width={36}
+                height={36}
+                className="rounded-lg"
+              />
               <span className="text-white font-semibold text-lg">
                 Cold<span className="text-premium-gold">Build</span>
               </span>

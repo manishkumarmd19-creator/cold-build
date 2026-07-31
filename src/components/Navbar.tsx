@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -34,11 +35,16 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-premium-gold to-premium-gold/60 flex items-center justify-center">
-              <span className="text-rich-charcoal font-bold text-lg">C</span>
-            </div>
-            <span className="text-white font-semibold text-xl tracking-tight">
+          <a href="#" className="flex items-center gap-3 group">
+            <Image
+              src="/cold-build-logo.jpg"
+              alt="Cold Build"
+              width={40}
+              height={40}
+              className="rounded-lg group-hover:opacity-90 transition-opacity duration-200"
+              priority
+            />
+            <span className="text-white font-semibold text-xl tracking-tight hidden sm:inline">
               Cold<span className="text-premium-gold">Build</span>
             </span>
           </a>
