@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import TextReveal from "./TextReveal";
 
 export default function About() {
@@ -71,10 +72,16 @@ export default function About() {
                   transition={{ duration: 30, ease: "linear", repeat: Infinity }}
                   className="absolute inset-0 m-auto w-64 h-64 rounded-full border border-dashed border-accent-gold/30"
                 />
-                <div className="text-8xl font-bold bg-gradient-to-r from-premium-gold to-emerald bg-clip-text text-transparent">
-                  CB
+                <div className="relative w-48 h-48 mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-heading/20">
+                  <Image
+                    src="/cold-build-logo.jpg"
+                    alt="Cold Build Studio"
+                    fill
+                    sizes="192px"
+                    className="object-cover"
+                  />
                 </div>
-                <div className="text-body/50 text-sm mt-4 tracking-widest uppercase">
+                <div className="text-body/50 text-sm mt-6 tracking-widest uppercase">
                   Cold Build Studio
                 </div>
               </div>
