@@ -6,28 +6,18 @@ import TextReveal from "./TextReveal";
 
 const projects = [
   {
-    title: "NexaFlow",
-    category: "Web App",
-    desc: "Enterprise workflow automation platform serving 10K+ users",
-    gradient: "from-premium-gold to-amber-500",
-  },
-  {
-    title: "PulseHealth",
-    category: "Mobile App",
-    desc: "Health tracking dashboard with real-time biometric integration",
+    title: "KillerZone",
+    category: "Gaming Platform",
+    desc: "Immersive gaming hub with real-time tournaments and community features",
     gradient: "from-emerald to-cyan-500",
+    href: "https://www.killerzone.in/",
   },
   {
-    title: "VaultSync",
-    category: "Full-Stack",
-    desc: "Secure cloud storage solution with end-to-end encryption",
-    gradient: "from-violet-500 to-purple-500",
-  },
-  {
-    title: "MarketMind",
-    category: "AI Platform",
-    desc: "Predictive analytics engine for e-commerce optimization",
-    gradient: "from-premium-gold to-orange-500",
+    title: "JerseySpot",
+    category: "E-Commerce",
+    desc: "Premium sports jersey store with a high-converting storefront",
+    gradient: "from-premium-gold to-amber-500",
+    href: "https://www.jerseyspot.store/",
   },
 ];
 
@@ -53,16 +43,9 @@ export default function Work() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group"
-            >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          {projects.map((project, i) => {
+            const card = (
               <TiltCard className="relative rounded-2xl overflow-hidden cursor-pointer h-full">
                 <div className="aspect-[16/10] bg-bg-secondary relative overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-15 group-hover:opacity-25 transition-opacity duration-500`} />
@@ -83,8 +66,33 @@ export default function Work() {
                   </div>
                 </div>
               </TiltCard>
-            </motion.div>
-          ))}
+            );
+
+            return (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
+                className="group"
+              >
+                {project.href ? (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
+                    aria-label={`View ${project.title} project`}
+                  >
+                    {card}
+                  </a>
+                ) : (
+                  card
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
