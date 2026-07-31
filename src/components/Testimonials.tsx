@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import TextReveal from "./TextReveal";
 
 const testimonials = [
   {
@@ -35,10 +36,7 @@ export default function Testimonials() {
             Testimonials
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4">
-            Trusted by{" "}
-            <span className="bg-gradient-to-r from-premium-gold to-premium-gold/60 bg-clip-text text-transparent">
-              Builders
-            </span>
+            <TextReveal text="Trusted by Builders" gradientWords={["Builders"]} />
           </h2>
         </motion.div>
 

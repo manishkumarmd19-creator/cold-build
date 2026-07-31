@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import TextReveal from "./TextReveal";
 
 const services = [
   {
@@ -87,10 +88,7 @@ export default function Services() {
             What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4">
-            Full-Spectrum{" "}
-            <span className="bg-gradient-to-r from-premium-gold to-premium-gold/60 bg-clip-text text-transparent">
-              Engineering
-            </span>
+            <TextReveal text="Full-Spectrum Engineering" gradientWords={["Engineering"]} />
           </h2>
           <p className="max-w-2xl mx-auto text-light-gray/70 text-lg">
             From concept to deployment, we bring the craftsmanship your project deserves.
