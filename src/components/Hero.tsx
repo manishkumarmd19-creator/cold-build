@@ -58,15 +58,9 @@ export default function Hero() {
         </motion.div>
 
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-heading leading-[1.1] tracking-tight mb-6">
-          <TextReveal text="Build Cold." gradientWords={["Cold."]} delay={0.15} stagger={0.06} />
+          <TextReveal text="Ready to" delay={0.15} stagger={0.06} />
           <br />
-          <TextReveal
-            text="Deliver Hot."
-            gradientWords={["Hot."]}
-            delay={0.45}
-            stagger={0.06}
-            className="bg-gradient-to-r from-emerald to-emerald/60 bg-clip-text text-transparent"
-          />
+          <TextReveal text="Build Cold?" gradientWords={["Build", "Cold?"]} delay={0.35} stagger={0.06} />
         </h1>
 
         <motion.p
@@ -77,6 +71,7 @@ export default function Hero() {
         >
           Precision freelance engineering for founders who demand more.
           We architect, design, and ship digital products that dominate.
+          Built cold. Delivered hot.
         </motion.p>
 
         <motion.div
