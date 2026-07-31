@@ -29,7 +29,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-rich-charcoal/90 backdrop-blur-lg border-b border-white/5"
+          ? "bg-bg-primary/90 backdrop-blur-lg border-b border-heading/5"
           : "bg-transparent"
       }`}
     >
@@ -44,7 +44,7 @@ export default function Navbar() {
               className="rounded-lg group-hover:opacity-90 transition-opacity duration-200"
               priority
             />
-            <span className="text-white font-semibold text-xl tracking-tight hidden sm:inline">
+            <span className="text-heading font-semibold text-xl tracking-tight hidden sm:inline">
               Cold<span className="text-premium-gold">Build</span>
             </span>
           </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
             ))}
             <a
               href="#cta"
-              className="px-5 py-2.5 bg-premium-gold text-rich-charcoal font-semibold text-sm rounded-lg hover:bg-btn-primary-hover transition-colors duration-200"
+              className="px-5 py-2.5 bg-premium-gold text-btn-text font-semibold text-sm rounded-lg hover:bg-btn-primary-hover transition-colors duration-200"
             >
               Start a Project
             </a>
@@ -74,15 +74,15 @@ export default function Navbar() {
           >
             <motion.span
               animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-              className="w-6 h-0.5 bg-white block"
+              className="w-6 h-0.5 bg-heading block"
             />
             <motion.span
               animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="w-6 h-0.5 bg-white block"
+              className="w-6 h-0.5 bg-heading block"
             />
             <motion.span
               animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-              className="w-6 h-0.5 bg-white block"
+              className="w-6 h-0.5 bg-heading block"
             />
           </button>
         </div>
@@ -94,7 +94,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-dark-slate/95 backdrop-blur-lg border-t border-white/5"
+            className="md:hidden bg-bg-secondary/95 backdrop-blur-lg border-t border-heading/5"
           >
             <div className="px-6 py-6 space-y-4">
               {navLinks.map((link) => (
@@ -110,7 +110,7 @@ export default function Navbar() {
               <a
                 href="#cta"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full text-center px-5 py-3 bg-premium-gold text-rich-charcoal font-semibold text-sm rounded-lg"
+                className="block w-full text-center px-5 py-3 bg-premium-gold text-btn-text font-semibold text-sm rounded-lg"
               >
                 Start a Project
               </a>

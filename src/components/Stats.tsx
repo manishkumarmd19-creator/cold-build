@@ -62,10 +62,10 @@ export default function Stats() {
         >
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2">
+              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-heading mb-2">
                 <CountUp end={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-light-gray/60 text-sm tracking-wide uppercase">
+              <div className="text-body/60 text-sm tracking-wide uppercase">
                 {stat.label}
               </div>
             </div>

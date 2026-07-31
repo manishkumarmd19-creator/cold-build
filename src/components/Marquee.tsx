@@ -19,7 +19,7 @@ export default function Marquee() {
   const row = [...items, ...items];
 
   return (
-    <section className="relative py-10 border-y border-white/5 bg-dark-slate/30 overflow-hidden">
+    <section className="relative py-10 border-y border-heading/5 bg-bg-secondary/60 overflow-hidden">
       <div className="relative flex overflow-hidden">
         <motion.div
           className="flex shrink-0 items-center gap-12 pr-12 whitespace-nowrap"
@@ -32,11 +32,11 @@ export default function Marquee() {
         >
           {row.map((item, i) => (
             <div key={i} className="flex items-center gap-12">
-              <span className="text-light-gray/40 font-medium tracking-wide text-lg">
+              <span className="text-body/50 font-medium tracking-wide text-lg">
                 {item}
               </span>
               <svg
-                className="w-3 h-3 text-premium-gold/40"
+                className="w-3 h-3 text-accent-gold/50"
                 viewBox="0 0 12 12"
                 fill="currentColor"
               >

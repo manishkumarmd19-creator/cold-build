@@ -87,10 +87,10 @@ export default function Services() {
           <span className="text-premium-gold text-sm tracking-[0.2em] uppercase font-medium">
             What We Do
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-heading mt-4 mb-4">
             <TextReveal text="Full-Spectrum Engineering" gradientWords={["Engineering"]} />
           </h2>
-          <p className="max-w-2xl mx-auto text-light-gray/70 text-lg">
+          <p className="max-w-2xl mx-auto text-body/70 text-lg">
             From concept to deployment, we bring the craftsmanship your project deserves.
           </p>
         </motion.div>
@@ -106,15 +106,15 @@ export default function Services() {
             <motion.div
               key={service.title}
               variants={cardVariants}
-              className="group relative p-8 rounded-2xl bg-dark-slate border border-white/5 hover:border-premium-gold/20 transition-all duration-300"
+              className="group relative p-8 rounded-2xl bg-bg-secondary border border-heading/5 hover:border-premium-gold/25 transition-all duration-300"
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-premium-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-premium-gold/10 flex items-center justify-center text-premium-gold mb-6 group-hover:bg-premium-gold/20 transition-colors duration-300">
+                <div className="w-14 h-14 rounded-xl bg-premium-gold/10 text-premium-gold flex items-center justify-center mb-6 group-hover:bg-premium-gold/15 transition-colors duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-light-gray/70 leading-relaxed">{service.desc}</p>
+                <h3 className="text-xl font-semibold text-heading mb-3">{service.title}</h3>
+                <p className="text-body/75 leading-relaxed">{service.desc}</p>
               </div>
             </motion.div>
           ))}

@@ -42,7 +42,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/5">
+    <footer className="relative border-t border-heading/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           <motion.div
@@ -58,11 +58,11 @@ export default function Footer() {
                 height={36}
                 className="rounded-lg"
               />
-              <span className="text-white font-semibold text-lg">
+              <span className="text-heading font-semibold text-lg">
                 Cold<span className="text-premium-gold">Build</span>
               </span>
             </div>
-            <p className="text-light-gray/50 text-sm leading-relaxed max-w-xs">
+            <p className="text-body/60 text-sm leading-relaxed max-w-xs">
               Precision freelance engineering. Built cold, delivered hot.
             </p>
           </motion.div>
@@ -74,7 +74,7 @@ export default function Footer() {
             transition={{ delay: 0.1 }}
             className="flex flex-col md:items-center"
           >
-            <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">
+            <h4 className="text-heading text-sm font-semibold mb-4 uppercase tracking-wider">
               Navigation
             </h4>
             <div className="flex flex-col md:items-center gap-3">
@@ -82,7 +82,7 @@ export default function Footer() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-light-gray/50 hover:text-premium-gold transition-colors text-sm"
+                  className="text-body/60 hover:text-premium-gold transition-colors text-sm"
                 >
                   {link.label}
                 </a>
@@ -97,7 +97,7 @@ export default function Footer() {
             transition={{ delay: 0.2 }}
             className="flex flex-col md:items-end"
           >
-            <h4 className="text-white text-sm font-semibold mb-4 uppercase tracking-wider">
+            <h4 className="text-heading text-sm font-semibold mb-4 uppercase tracking-wider">
               Connect
             </h4>
             <div className="flex gap-4">
@@ -106,7 +106,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-light-gray/50 hover:text-premium-gold hover:bg-premium-gold/10 transition-all duration-200"
+                  className="w-10 h-10 rounded-xl bg-heading/5 flex items-center justify-center text-body/60 hover:text-premium-gold hover:bg-premium-gold/10 transition-all duration-200"
                 >
                   {social.icon}
                 </a>
@@ -115,15 +115,15 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-light-gray/30 text-xs">
+        <div className="mt-12 pt-8 border-t border-heading/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-body/50 text-xs">
             &copy; {new Date().getFullYear()} Cold Build. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-light-gray/30 hover:text-light-gray/50 text-xs transition-colors">
+            <a href="#" className="text-body/50 hover:text-body/80 text-xs transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-light-gray/30 hover:text-light-gray/50 text-xs transition-colors">
+            <a href="#" className="text-body/50 hover:text-body/80 text-xs transition-colors">
               Terms of Service
             </a>
           </div>

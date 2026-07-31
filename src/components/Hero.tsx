@@ -51,13 +51,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-heading/10 mb-8 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-emerald animate-pulse" />
-            <span className="text-light-gray text-sm">Available for new projects</span>
+            <span className="text-body text-sm">Available for new projects</span>
           </div>
         </motion.div>
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-heading leading-[1.1] tracking-tight mb-6">
           <TextReveal text="Build Cold." gradientWords={["Cold."]} delay={0.15} stagger={0.06} />
           <br />
           <TextReveal
@@ -87,13 +87,13 @@ export default function Hero() {
         >
           <MagneticButton
             href="#cta"
-            className="px-8 py-4 bg-premium-gold text-rich-charcoal font-semibold text-base rounded-xl hover:bg-btn-primary-hover transition-colors duration-200 shadow-lg shadow-premium-gold/20 hover:shadow-premium-gold/40"
+            className="px-8 py-4 bg-premium-gold text-btn-text font-semibold text-base rounded-xl hover:bg-btn-primary-hover transition-colors duration-200 shadow-lg shadow-premium-gold/20 hover:shadow-premium-gold/40"
           >
             Start Your Build
           </MagneticButton>
           <MagneticButton
             href="#work"
-            className="px-8 py-4 border border-white/20 text-white font-semibold text-base rounded-xl hover:bg-white/5 transition-colors duration-200"
+            className="px-8 py-4 border border-heading/20 text-heading font-semibold text-base rounded-xl hover:bg-heading/5 transition-colors duration-200"
           >
             View Our Work
           </MagneticButton>
@@ -109,7 +109,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center pt-2"
+          className="w-6 h-10 rounded-full border-2 border-heading/20 flex items-start justify-center pt-2"
         >
           <div className="w-1 h-2 rounded-full bg-premium-gold" />
         </motion.div>

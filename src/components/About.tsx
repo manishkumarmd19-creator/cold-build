@@ -27,10 +27,10 @@ export default function About() {
             <span className="text-premium-gold text-sm tracking-[0.2em] uppercase font-medium">
               Who We Are
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-heading mt-4 mb-6">
               <TextReveal text="Engineering that hits different" gradientWords={["different"]} />
             </h2>
-            <div className="space-y-4 text-light-gray/70 leading-relaxed">
+            <div className="space-y-4 text-body/75 leading-relaxed">
               <p>
                 Cold Build is a precision freelance engineering studio. We don&apos;t just write code — 
                 we architect systems, design experiences, and ship products that move needles.
@@ -46,16 +46,16 @@ export default function About() {
             </div>
             <div className="flex flex-wrap gap-8 mt-8">
               <div>
-                <div className="text-2xl font-bold text-white">3+</div>
-                <div className="text-light-gray/50 text-sm">Years Building</div>
+                <div className="text-2xl font-bold text-heading">3+</div>
+                <div className="text-body/60 text-sm">Years Building</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-white">50+</div>
-                <div className="text-light-gray/50 text-sm">Projects Shipped</div>
+                <div className="text-2xl font-bold text-heading">50+</div>
+                <div className="text-body/60 text-sm">Projects Shipped</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-white">100%</div>
-                <div className="text-light-gray/50 text-sm">Client Satisfaction</div>
+                <div className="text-2xl font-bold text-heading">100%</div>
+                <div className="text-body/60 text-sm">Client Satisfaction</div>
               </div>
             </div>
           </motion.div>
@@ -63,18 +63,18 @@ export default function About() {
           <div ref={ref} className="relative">
             <motion.div
               style={{ y: panelY }}
-              className="aspect-square rounded-2xl bg-gradient-to-br from-premium-gold/10 to-emerald/10 border border-white/5 p-8 flex items-center justify-center overflow-hidden"
+              className="aspect-square rounded-2xl bg-gradient-to-br from-premium-gold/10 to-emerald/10 border border-heading/10 p-8 flex items-center justify-center overflow-hidden"
             >
               <div className="text-center relative z-10">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-                  className="absolute inset-0 m-auto w-64 h-64 rounded-full border border-dashed border-premium-gold/20"
+                  className="absolute inset-0 m-auto w-64 h-64 rounded-full border border-dashed border-accent-gold/30"
                 />
                 <div className="text-8xl font-bold bg-gradient-to-r from-premium-gold to-emerald bg-clip-text text-transparent">
                   CB
                 </div>
-                <div className="text-light-gray/40 text-sm mt-4 tracking-widest uppercase">
+                <div className="text-body/50 text-sm mt-4 tracking-widest uppercase">
                   Cold Build Studio
                 </div>
               </div>

@@ -35,7 +35,7 @@ export default function Testimonials() {
           <span className="text-premium-gold text-sm tracking-[0.2em] uppercase font-medium">
             Testimonials
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-heading mt-4 mb-4">
             <TextReveal text="Trusted by Builders" gradientWords={["Builders"]} />
           </h2>
         </motion.div>
@@ -48,17 +48,17 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative p-8 rounded-2xl bg-dark-slate border border-white/5"
+              className="relative p-8 rounded-2xl bg-bg-secondary border border-heading/5"
             >
-              <div className="text-premium-gold/20 text-6xl leading-none mb-4">&ldquo;</div>
-              <p className="text-light-gray/80 leading-relaxed mb-6">{t.quote}</p>
+              <div className="text-accent-gold/25 text-6xl leading-none mb-4">&ldquo;</div>
+              <p className="text-body/80 leading-relaxed mb-6">{t.quote}</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-premium-gold to-emerald flex items-center justify-center text-white font-semibold text-sm">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-premium-gold to-emerald flex items-center justify-center text-btn-text font-semibold text-sm">
                   {t.author.split(" ").map((n) => n[0]).join("")}
                 </div>
                 <div>
-                  <div className="text-white font-medium text-sm">{t.author}</div>
-                  <div className="text-light-gray/50 text-xs">{t.role}</div>
+                  <div className="text-heading font-medium text-sm">{t.author}</div>
+                  <div className="text-body/60 text-xs">{t.role}</div>
                 </div>
               </div>
             </motion.div>

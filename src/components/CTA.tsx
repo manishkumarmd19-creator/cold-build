@@ -15,7 +15,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative p-8 lg:p-12 rounded-3xl bg-dark-slate/50 border border-white/5 backdrop-blur-sm"
+          className="relative p-8 lg:p-12 rounded-3xl bg-bg-secondary/70 border border-heading/10 backdrop-blur-sm"
         >
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-premium-gold/5 to-emerald/5" />
 
@@ -23,11 +23,11 @@ export default function CTA() {
             <span className="text-premium-gold text-sm tracking-[0.2em] uppercase font-medium">
               Let&apos;s Build
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-heading mt-4 mb-4">
               <TextReveal text="Ready to Build Cold?" gradientWords={["Build", "Cold?"]} />
             </h2>
-            <p className="max-w-xl mx-auto text-light-gray/70 text-lg mb-8">
-              Tell us about your project. We&apos;ll respond within 24 hours with a plan 
+            <p className="max-w-xl mx-auto text-body/75 text-lg mb-8">
+              Tell us about your project. We&apos;ll respond within 24 hours with a plan
               and a timeline.
             </p>
 
@@ -39,17 +39,17 @@ export default function CTA() {
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="flex-1 px-5 py-3.5 rounded-xl bg-rich-charcoal border border-white/10 text-white placeholder:text-medium-gray focus:outline-none focus:border-premium-gold/50 transition-colors"
+                  className="flex-1 px-5 py-3.5 rounded-xl bg-white/70 border border-heading/10 text-heading placeholder:text-medium-gray focus:outline-none focus:border-premium-gold/50 transition-colors"
                   required
                 />
                 <MagneticButton
                   type="submit"
-                  className="px-8 py-3.5 bg-premium-gold text-rich-charcoal font-semibold rounded-xl hover:bg-btn-primary-hover transition-colors duration-200 shadow-lg shadow-premium-gold/20 whitespace-nowrap"
+                  className="px-8 py-3.5 bg-premium-gold text-btn-text font-semibold rounded-xl hover:bg-btn-primary-hover transition-colors duration-200 shadow-lg shadow-premium-gold/20 whitespace-nowrap"
                 >
                   Get Started
                 </MagneticButton>
               </div>
-              <p className="text-light-gray/40 text-xs">
+              <p className="text-body/50 text-xs">
                 No spam. Just a conversation about your next build.
               </p>
             </form>
