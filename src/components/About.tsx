@@ -64,24 +64,26 @@ export default function About() {
           <div ref={ref} className="relative">
             <motion.div
               style={{ y: panelY }}
-              className="aspect-square rounded-2xl bg-gradient-to-br from-premium-gold/10 to-emerald/10 border border-heading/10 p-8 flex items-center justify-center overflow-hidden"
+              className="aspect-square rounded-2xl relative overflow-hidden border border-heading/10"
             >
-              <div className="text-center relative z-10">
+              <Image
+                src="/cold-build-logo.jpg"
+                alt="Cold Build Studio"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-heading/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-                  className="absolute inset-0 m-auto w-64 h-64 rounded-full border border-dashed border-accent-gold/30"
+                  className="w-64 h-64 rounded-full border border-dashed border-white/50"
                 />
-                <div className="relative w-48 h-48 mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-heading/20">
-                  <Image
-                    src="/cold-build-logo.jpg"
-                    alt="Cold Build Studio"
-                    fill
-                    sizes="192px"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="text-body/50 text-sm mt-6 tracking-widest uppercase">
+              </div>
+              <div className="absolute bottom-6 left-0 right-0 text-center">
+                <div className="text-white/90 text-sm tracking-widest uppercase drop-shadow-lg">
                   Cold Build Studio
                 </div>
               </div>
